@@ -31,13 +31,9 @@ window.addEventListener('load', () => {
   const displayResults = (weather) => {
     let cTemp = weather.main.temp;
     let fTemp = ctof(cTemp);
-    tempCelcius.innerText = `${weather.main.temp}°C`;
-    tempFahrenheit.innerText = `${fTemp}°F`;
+    tempCelcius.innerText = `${cTemp.toFixed(1)} °C`;
+    tempFahrenheit.innerText = `${fTemp.toFixed(1)} °F`;
   }
-
-
-    
-  
   todaysDate.innerHTML = getMonth() + " " + getDay();
   getTorontoWeather();
 });
