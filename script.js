@@ -2,6 +2,7 @@ window.addEventListener('load', () => {
   const tempCelcius = document.getElementById("tempCelsius");
   const tempFahrenheit = document.getElementById("tempFahrenheit")
   const todaysDate = document.getElementById("todaysDate");
+  const desc = document.getElementById("desc");
 
   const getDay = () => {
     var today = new Date();
@@ -29,10 +30,13 @@ window.addEventListener('load', () => {
   }
 
   const displayResults = (weather) => {
+    console.log(weather.weather[0].description)
+    let description = weather.weather[0].description;
     let cTemp = weather.main.temp;
     let fTemp = ctof(cTemp);
     tempCelcius.innerText = `${cTemp.toFixed(1)} °C`;
     tempFahrenheit.innerText = `${fTemp.toFixed(1)} °F`;
+    desc.innerText = description;
   }
   todaysDate.innerHTML = getMonth() + " " + getDay();
   getTorontoWeather();
