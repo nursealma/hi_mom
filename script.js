@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
 
   const getTorontoWeather = () => {
     const API_KEY = "3e59aefaf532a306b31b845b34656d12";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=toronto&units=metric&appid=${API_KEY}`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=mississauga&units=metric&appid=${API_KEY}`
     fetch(url)
       .then(response => response.json())
       .then(displayResults);
