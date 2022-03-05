@@ -46,8 +46,11 @@ body {
 }
 .location {
 	font-size: 3rem;
+	margin-bottom: 10px;
 }
-
+.currentTime {
+	font-size: 3rem;
+}
 .top,
 .bottom {
 	width: 90%;
